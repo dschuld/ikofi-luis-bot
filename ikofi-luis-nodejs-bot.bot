@@ -1,0 +1,50 @@
+{
+  "name": "ikofi-luis-nodejs-bot",
+  "padlock": "+pn70j/QHZHlgqxW9NDTUQ==!lUYBzmGhFAj3qiiYaj/NqiEPzONd3UJ9jvT/ik1dkeSVoIQq1RQsESd2XGnO+/8z",
+  "version": "2.0",
+  "services": [
+    {
+      "tenantId": "269939f1-2ad5-4454-8195-2dc10311ca2c",
+      "subscriptionId": "c71b5933-19e4-4334-be0f-dc558dc3b0bd",
+      "resourceGroup": "IkofiLuisResourceGroup",
+      "serviceName": "ikofi-luis-nodejs-bot",
+      "type": "abs",
+      "name": "ikofi-luis-nodejs-bot",
+      "id": "1"
+    },
+    {
+      "connectionString": "zCdwSVmttIsRcswAF8QePg==!NIePrHVH5YHO2UhB8ti313J+SaC/v5NP9v7y++NZuyXf4bil0w80qMMlH/PBPzAY7POtVGH2c+jaBj12nxy936rzT030rMWmz06qpjW9CBy6YE3hH7r7RumMasqlvg5T1zK/czt1Ecp69aGBZhQ5sCDo7Q++ZTw7WfdlBV5C9wKNi3QJiDQsL/AknBXsfB0jHxB1wDaV1OpUtkNQ5zM+MukRX7YgswhPBYGYG1pbGSU=",
+      "tenantId": "269939f1-2ad5-4454-8195-2dc10311ca2c",
+      "subscriptionId": "c71b5933-19e4-4334-be0f-dc558dc3b0bd",
+      "resourceGroup": "IkofiLuisResourceGroup",
+      "serviceName": "ikofiluisnodejsbotbc0a",
+      "type": "blob",
+      "id": "2"
+    },
+    {
+      "appId": "",
+      "appPassword": "",
+      "endpoint": "http://localhost:3978/api/messages",
+      "type": "endpoint",
+      "name": "development",
+      "id": "3"
+    },
+    {
+      "appId": "d809cf61-2814-4d05-ab07-e2a9e59cc32f",
+      "appPassword": "H1Y82vylWWmjNh8VLRAWYQ==!Q2ijPkuOJFQFkOpRBFs+UVyuJhTjHgXdCDZ0A5SS5ek=",
+      "endpoint": "https://ikofi-luis-nodejs-bot.azurewebsites.net/api/messages",
+      "type": "endpoint",
+      "name": "production",
+      "id": "4"
+    },
+    {
+      "appId": "527eb75c-9637-4b19-9c10-b72ec4e270f7",
+      "authoringKey": "ErGW1et1ilz/bg9ObaaiaA==!dUSASasz77DyGFNeJVw2DYUZBZSRWj70mdfTAT0baTgXtF2J/Tp/k7cMZfTnJC+v",
+      "version": "0.1",
+      "region": "westus",
+      "type": "luis",
+      "name": "BasicBotLuisApplication",
+      "id": "5"
+    }
+  ]
+}
