@@ -11,10 +11,11 @@ const { DialogSet, DialogTurnStatus } = require('botbuilder-dialogs');
 const { UserProfile } = require('./dialogs/greeting/userProfile');
 
 const { WalletData } = require('./dialogs/balance/walletData');
-const { BalanceDialog } = require('./dialogs/balance');
+const { BalanceDialog, ChangePinDialog } = require('./dialogs/balance');
 
 // Greeting Dialog ID
 const BALANCE_DIALOG = 'balanceDialog';
+const CHANGE_PIN_DIALOG = 'changePin';
 
 // State Accessor Properties
 const DIALOG_STATE_PROPERTY = 'dialogState';
@@ -29,6 +30,7 @@ const CANCEL_INTENT = 'Cancel';
 const HELP_INTENT = 'Help';
 const NONE_INTENT = 'None';
 const GET_BALANCE_INTENT = 'GetBalance';
+const CHANGE_PIN_INTENT = 'ChangePin';
 
 // Supported LUIS Entities, defined in ./dialogs/greeting/resources/greeting.lu
 const USER_NAME_ENTITIES = ['userName', 'userName_patternAny'];
@@ -79,6 +81,7 @@ class BasicBot {
         // Create top-level dialog(s)
         this.dialogs = new DialogSet(this.dialogState);
         this.dialogs.add(new BalanceDialog(BALANCE_DIALOG, this.userProfileAccessor));
+        this.dialogs.add(new ChangePinDialog(CHANGE_PIN_DIALOG, this.userProfileAccessor));
 
         this.conversationState = conversationState;
         this.userState = userState;
@@ -137,11 +140,14 @@ class BasicBot {
                     case GET_BALANCE_INTENT:
                         await dc.beginDialog(BALANCE_DIALOG);
                         break;
+                    case CHANGE_PIN_INTENT:
+                        await dc.beginDialog(CHANGE_PIN_DIALOG);
+                        break;
                     case NONE_INTENT:
                     default:
                         // None or no intent identified, either way, let's provide some help
                         // to the user
-                        await dc.context.sendActivity(`I didn't understand what you just said to me.`);
+                        await dc.context.sendActivity(`I didn't understand what you just said to me. You can check your balance, or change your PIN.`);
                         break;
                     }
                     break;

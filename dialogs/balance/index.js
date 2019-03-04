@@ -1,3 +1,4 @@
-const { BalanceDialog } = require('./balance');
+const { ChangePinDialog, BalanceDialog } = require('./balance');
 
 exports.BalanceDialog = BalanceDialog;
+exports.ChangePinDialog = ChangePinDialog;
